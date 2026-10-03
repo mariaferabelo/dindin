@@ -1,0 +1,152 @@
+/* ===== GLOBAL ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Botão base: usado em todas as páginas.
+   Cor, fonte e cursor ficam aqui, em um lugar só. */
+.btn {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+
+  /* permite usar .btn também em links (<a>) */
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* ===== BARRA DO TOPO ===== */
+.topbar {
+  width: 100%;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+.topbar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  list-style: none;
+}
+
+.topbar ul li {
+  padding: 10px 15px;
+}
+
+.topbar ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+/* Botão de login do topo (usado na home) */
+.btn-login {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* ===== ÁREA PRINCIPAL ===== */
+.content {
+  width: 900px;
+  max-width: 90%;
+  margin: 40px auto;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.content .title {
+  width: 100%;
+  text-align: center;
+
+  font-size: 50px;
+  margin-bottom: 70px;
+}
+
+.content .logo {
+  width: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content .logo img {
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===== HOME ===== */
+.content .description {
+  width: 50%;
+  text-align: center;
+}
+
+.content .description h2 {
+  font-size: 28px;
+  background-color: rgb(224, 224, 29);
+}
+
+.content .description ul {
+  margin-top: 30px;
+  padding-left: 30px;
+
+  text-align: left;
+}
+
+/* Só o que é específico deste botão: o resto vem de .btn */
+.btn-criar-conta {
+  margin-top: 30px;
+}
+
+/* ===== LOGIN ===== */
+.form-login {
+  width: 50%;
+}
+
+.form-login fieldset {
+  border: none;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-login label {
+  color: black;
+  font-size: 23px;
+}
+
+.input {
+  background-color: rgb(238, 238, 238);
+  width: 300px;
+  max-width: 100%;
+  height: 30px;
+  padding: 7px;
+  border-style: none;
+}
+
+/* Só o que é específico deste botão: o resto vem de .btn */
+.btn-entrar {
+  display: block;
+  width: 150px;
+  margin: 20px auto 0;
+}

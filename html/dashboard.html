@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - DinDin</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/app.css" />
+  </head>
+
+  <body class="app">
+    <header class="app-topbar">
+      <strong class="app-logo">DinDin</strong>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#Sobre">Sobre</a></li>
+          <li><a href="#Blog">Blog</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <aside class="sidebar">
+      <nav>
+        <ul>
+          <li><a href="dashboard.html" class="ativo">Dashboard</a></li>
+          <li><a href="categorias.html">Categorias</a></li>
+          <li><a href="gestao.html">Gestão</a></li>
+          <li><a href="transacoes.html">Transações</a></li>
+          <li><a href="relatorios.html">Relatórios</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="app-content">
+      <div class="page-header">
+        <h1>Dashboard</h1>
+        <p class="periodo">Julho de 2026</p>
+      </div>
+
+      <!-- Resumo do mês -->
+      <section class="resumo">
+        <article class="card">
+          <h2>Renda do mês</h2>
+          <p class="card-valor">R$2200,00</p>
+          <p>Renda fixa + renda extra</p>
+        </article>
+
+        <article class="card">
+          <h2>Gastos do mês</h2>
+          <p class="card-valor">R$550,00</p>
+          <p>25% da renda</p>
+        </article>
+
+        <article class="card">
+          <h2>Saldo</h2>
+          <p class="card-valor">R$1650,00</p>
+          <p>Renda menos gastos</p>
+        </article>
+      </section>
+
+      <div class="dashboard">
+        <!-- Metas: quanto do limite de cada categoria já foi usado -->
+        <section class="card">
+          <div class="card-cabecalho">
+            <h2>Limite de gastos por categoria</h2>
+            <a href="gestao.html">Gerenciar</a>
+          </div>
+
+          <ul class="lista-metas">
+            <li>
+              <div class="meta-info">
+                <span>Alimentação</span>
+                <span>R$200,00 de R$440,00 (45%)</span>
+              </div>
+              <progress
+                value="45"
+                max="100"
+                aria-label="Alimentação: 45% do limite utilizado"
+              >
+                45%
+              </progress>
+            </li>
+
+            <li>
+              <div class="meta-info">
+                <span>Saúde</span>
+                <span>R$140,00 de R$220,00 (64%)</span>
+              </div>
+              <progress
+                value="64"
+                max="100"
+                aria-label="Saúde: 64% do limite utilizado"
+              >
+                64%
+              </progress>
+            </li>
+
+            <li>
+              <div class="meta-info">
+                <span>Educação</span>
+                <span>R$0,00 de R$110,00 (0%)</span>
+              </div>
+              <progress
+                value="0"
+                max="100"
+                aria-label="Educação: 0% do limite utilizado"
+              >
+                0%
+              </progress>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Últimas transações -->
+        <section class="card">
+          <div class="card-cabecalho">
+            <h2>Últimas transações</h2>
+            <a href="transacoes.html">Ver todas</a>
+          </div>
+
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Categoria</th>
+                <th scope="col">Valor</th>
+                <th scope="col">Data</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Saúde</td>
+                <td>R$140,00</td>
+                <td>20/07/2026</td>
+              </tr>
+              <tr>
+                <td>Investimento</td>
+                <td>R$90,00</td>
+                <td>11/07/2026</td>
+              </tr>
+              <tr>
+                <td>Streaming</td>
+                <td>R$120,00</td>
+                <td>09/07/2026</td>
+              </tr>
+              <tr>
+                <td>Alimentação</td>
+                <td>R$200,00</td>
+                <td>03/07/2026</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

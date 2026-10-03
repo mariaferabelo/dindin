@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestão - DinDin</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/app.css" />
+  </head>
+
+  <body class="app">
+    <header class="app-topbar">
+      <strong class="app-logo">DinDin</strong>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#Sobre">Sobre</a></li>
+          <li><a href="#Blog">Blog</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <aside class="sidebar">
+      <nav>
+        <ul>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="categorias.html">Categorias</a></li>
+          <li><a href="gestao.html" class="ativo">Gestão</a></li>
+          <li><a href="transacoes.html">Transações</a></li>
+          <li><a href="relatorios.html">Relatórios</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="app-content">
+      <div class="page-header">
+        <h1>Gestão</h1>
+        <div class="actions">
+          <button type="button" class="btn btn-novo">NOVO</button>
+          <button type="button" class="btn btn-editar">EDITAR</button>
+          <button type="button" class="btn btn-remover">REMOVER</button>
+        </div>
+      </div>
+
+      <section class="secao">
+        <h2>Rendas</h2>
+        <table>
+          <tbody>
+            <tr>
+              <td>Renda Fixa</td>
+              <td>R$2000,00</td>
+            </tr>
+            <tr>
+              <td>Renda Extra</td>
+              <td>R$200,00</td>
+            </tr>
+            <tr class="total">
+              <td>Total</td>
+              <td>R$2200,00</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="secao">
+        <h2>Metas</h2>
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Categoria</th>
+              <th scope="col">Limite de gasto</th>
+              <th scope="col">Valor</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Alimentação</td>
+              <td>20%</td>
+              <td>R$440,00</td>
+            </tr>
+            <tr>
+              <td>Saúde</td>
+              <td>10%</td>
+              <td>R$220,00</td>
+            </tr>
+            <tr>
+              <td>Educação</td>
+              <td>5%</td>
+              <td>R$110,00</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </body>
+</html>

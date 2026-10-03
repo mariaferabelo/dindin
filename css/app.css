@@ -1,0 +1,332 @@
+/* ===== VARIÁVEIS ===== */
+:root {
+  --verde: #006b2d;
+  --amarelo: #ffd93d;
+  --vermelho: #ff5c5c;
+  --cinza-sidebar: #eeeeee;
+  --cinza-hover: #e0e0e0;
+  --texto: #111111;
+
+  --fonte-titulo: Georgia, "Times New Roman", serif;
+}
+
+/* ===== ESQUELETO (GRID) ===== */
+.app {
+  min-height: 100vh;
+  color: var(--texto);
+
+  display: grid;
+  grid-template-columns: 200px 1fr; /* sidebar fixa + resto */
+  grid-template-rows: 70px 1fr; /* topo + conteúdo */
+  grid-template-areas:
+    "topo    topo"
+    "sidebar conteudo";
+}
+
+.app-topbar {
+  grid-area: topo;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.app-content {
+  grid-area: conteudo;
+}
+
+/* ===== TOPO ===== */
+.app-topbar {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 0 30px;
+}
+
+.app-logo {
+  font-family: var(--fonte-titulo);
+  font-size: 20px;
+}
+
+.app-topbar ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.app-topbar a {
+  color: var(--texto);
+  text-decoration: none;
+  font-size: 13px;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  background-color: var(--cinza-sidebar);
+  padding-top: 10px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar a {
+  display: block;
+  padding: 12px 10px;
+
+  color: var(--texto);
+  text-decoration: none;
+  text-align: center;
+  font-size: 13px;
+}
+
+.sidebar a:hover {
+  background-color: var(--cinza-hover);
+}
+
+/* Página atual */
+.sidebar a.ativo {
+  background-color: white;
+  font-weight: bold;
+}
+
+/* ===== CONTEÚDO ===== */
+.app-content {
+  padding: 30px;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.page-header h1 {
+  font-family: var(--fonte-titulo);
+  font-size: 22px;
+}
+
+/* ===== BOTÕES ===== */
+.actions {
+  display: flex;
+  gap: 15px;
+}
+
+/* Botões da barra de ações: menores que o .btn padrão */
+.actions .btn {
+  padding: 8px 18px;
+  font-size: 12px;
+}
+
+.btn-novo {
+  background-color: var(--verde);
+}
+
+.btn-editar {
+  background-color: var(--amarelo);
+}
+
+.btn-remover {
+  background-color: var(--vermelho);
+}
+
+/* Botão com borda, sem fundo preto (Relatórios) */
+.btn-outline {
+  width: 100%;
+  background-color: white;
+  color: var(--texto);
+  border: 2px solid black;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.btn-outline:hover {
+  background-color: var(--cinza-sidebar);
+}
+
+/* ===== TABELA ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 8px 20px 8px 0;
+  text-align: left;
+  font-size: 15px;
+}
+
+th {
+  font-weight: bold;
+  padding-bottom: 14px;
+}
+
+/* ===== SEÇÕES (Gestão) ===== */
+.secao {
+  margin-bottom: 40px;
+}
+
+.secao h2 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.total td {
+  font-weight: bold;
+}
+
+/* ===== CARDS (Relatórios) ===== */
+.cards {
+  display: grid;
+  /* quantas colunas de 260px+ couberem: 3, 2 ou 1 */
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 40px 50px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 8px;
+}
+
+.card h2 {
+  font-size: 16px;
+}
+
+.card p {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+/* ===== DASHBOARD ===== */
+.periodo {
+  font-size: 14px;
+  color: #555555;
+}
+
+/* Cards de resumo (renda, gastos, saldo) */
+.resumo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.card .card-valor {
+  font-family: var(--fonte-titulo);
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+/* Área com metas + últimas transações, lado a lado */
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  align-items: start;
+}
+
+.card-cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.card-cabecalho a {
+  color: var(--texto);
+  font-size: 13px;
+}
+
+.card table th,
+.card table td {
+  font-size: 13px;
+}
+
+/* Metas com barra de progresso */
+.lista-metas {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.meta-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+
+progress {
+  --cor: var(--verde);
+
+  width: 100%;
+  height: 10px;
+  border: none;
+  border-radius: 5px;
+  appearance: none;
+  background-color: var(--cinza-sidebar); /* Firefox */
+}
+
+progress::-webkit-progress-bar {
+  background-color: var(--cinza-sidebar);
+  border-radius: 5px;
+}
+
+progress::-webkit-progress-value {
+  background-color: var(--cor);
+  border-radius: 5px;
+}
+
+progress::-moz-progress-bar {
+  background-color: var(--cor);
+  border-radius: 5px;
+}
+
+/* Estados: adicione a classe no <progress> conforme o uso */
+.progress-alerta {
+  --cor: var(--amarelo); /* a partir de ~80% */
+}
+
+.progress-estourado {
+  --cor: var(--vermelho); /* 100% ou mais */
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+  .app {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas:
+      "topo"
+      "sidebar"
+      "conteudo";
+  }
+
+  .app-topbar {
+    height: 70px;
+  }
+
+  /* sidebar vira uma faixa horizontal */
+  .sidebar ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+}
